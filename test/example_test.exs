@@ -31,7 +31,7 @@ defmodule ExampleTest do
   test "stop" do
     {:ok, pid} = Example.start_link()
     Process.monitor(pid)
-    reason = :custom_reason
+    reason = :normal
 
     assert Process.alive?(pid)
     Example.stop_server(pid, reason)
